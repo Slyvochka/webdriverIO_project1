@@ -7,11 +7,11 @@ describe('UPLOAD ON A HIDDEN ELEMENT', () => {
     await browser.execute('document.querySelector("#upfile_1").className = ""');
     
     const filePath = path.join(__dirname, '../data/flower-picture.jpg');
-    //const removeFilePath = await browser.uploadFile(filePath);
+    const removeFilePath = await browser.uploadFile(filePath);
     
     const selectBtn = await $('#upfile_1');
 
-    await (selectBtn).setValue(filePath);
+    await (selectBtn).setValue(removeFilePath);
 
     await $('#upload_1').click();
 
