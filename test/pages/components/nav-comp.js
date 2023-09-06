@@ -8,6 +8,10 @@ class NavComponent {
     return $('#zak-primary-menu li');
   }
 
+  get shoppingCartIcon() {
+    return $('//a[@class="cart-page-link"]');
+  }
+
 }
 
 export default new NavComponent();
